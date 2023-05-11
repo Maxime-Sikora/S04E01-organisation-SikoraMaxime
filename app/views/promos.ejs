@@ -1,0 +1,35 @@
+<%- include('partials/header') %>
+
+<main>
+
+    <h1>Les des promos</h1>
+
+    <section class="promos">
+        <!-- <% promos.forEach(promo => { %>
+            <ul>
+                <li><%= promo.id %></li>
+                <li><%= promo.name %></li>
+                <li><%= promo.github_organization %></li>
+            </ul>
+        <% }) %> -->
+
+        <% for (const promo of promos) { %>
+            <ul>
+                <li><a href="/promos/<%= promo.id %>">Voir la promo</a></li>
+                <li><%= promo.name %></li>
+                <li><a href="<%= promo.github_organization %>">Github</a></li>
+            </ul>
+        <% } %>
+
+        <!-- <% for( let index = 0; index < promos.length; index++ ) { %>
+            <ul>
+                <li><%= promos[index].id %></li>
+                <li><%= promos[index].name %></li>
+                <li><%= promos[index].github_organization %></li>
+            </ul>
+        <% } %> -->
+    </section>
+
+</main>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,24 @@
+<%- include('partials/header') %>
+
+<main>
+
+    <% if (locals.promo) { %>
+        <h1>Détail de <%= promo.id %></h1>
+    
+        <section class="promos">
+    
+            <ul>
+                <li><a href="/promos/<%= promo.id %>">Voir la promo</a></li>
+                <li><%= promo.name %></li>
+                <li><a href="<%= promo.github_organization %>">Github</a></li>
+            </ul>
+    
+        </section>
+    
+    <% } else { %>
+        <p>Aucune promo</p>
+    <% } %>
+
+</main>
+
+<%- include('partials/footer') %>
